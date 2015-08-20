@@ -1,5 +1,10 @@
 == README
 
+This application's objective is to consolidate a user's cars of interest for purchase as well as keep a log of auto dealers have been visited and with whom they have been communicating with.
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

@@ -9,7 +9,24 @@
 <body>
   <% if user_signed_in? %>
     <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+    <nav>
+      <ul>
+        <li><a href="http://localhost:3000/home/index">Home</a></li>
+        <li><a href="">Cars</a></li>
+        <li><a href="">Dealers/Contacts</a></li>
+      </ul>
+    </nav>
   <% end %>
+
+  <% if !user_signed_in? %>
+    <nav>
+      <ul>
+        <li><a href="http://localhost:3000/users/sign_up" title="">Sign Up!</a></li>
+        <li><a href="http://localhost:3000/users/sign_in" title="">Sign In!</a></li>
+      </ul>
+    </nav>
+  <% end %>
+
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

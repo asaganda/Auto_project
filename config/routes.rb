@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get '/after_signup/car_build' => 'after_signup#show', as: :car_build
 
+  get '/after_sign_in' => 'home#after_sign_in', as: :after_sign_in
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

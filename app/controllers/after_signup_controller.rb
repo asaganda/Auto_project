@@ -3,20 +3,24 @@ class AfterSignupController < ApplicationController
 
   steps :car_build, :dealer_contact
 
+  def special
+  end
+
   def show
-    @user = current_user
+    @car = Car.all
     render_wizard
   end
 
   def update
-    @user = current_user
-    render_wizard
+    @car = Car.find(car_params)
+    @car.update_attributes(params[:car])
+    render_wizard @car
   end
 
-  private
-  def car_params
-    params.permit
+  # private
+  # def car_params
+  #   params.permit
     
-  end
+  # end
 
 end

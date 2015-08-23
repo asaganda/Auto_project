@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-  get '/special' => 'home#special'
+  get '/special' => 'after_signup#special'
+
+  get '/after_signup/show' => 'after_signup#show'
 
   get '/after_signup/car_build' => 'after_signup#show', as: :car_build
 

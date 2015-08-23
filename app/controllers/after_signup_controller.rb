@@ -7,7 +7,7 @@ class AfterSignupController < ApplicationController
   end
 
   def show
-    @car = Car.all
+    @car = Car.new
     render_wizard
   end
 

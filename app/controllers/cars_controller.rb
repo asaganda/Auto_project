@@ -1,6 +1,12 @@
 class CarsController < ApplicationController
+
+  def new
+    @car = Car.new
+  end
+
   def create
-    @car = Car.create
-    redirect_to wizard_path(steps.first, :car_id => @car.id)
+    @car = Car.new(car_params)
+    @car.save
+    redirect_to wizard_path
   end
 end

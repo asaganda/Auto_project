@@ -1,6 +1,6 @@
 this is where i build my car
 
-<%= form_for @car_build do |f| %>
+<%= form_for(@car, :url => wizard_path, :method => :put) do |f| %>
     <%= f.text_field :make %>
     <%= f.text_field :model %>
     <%= f.text_field :year %>

@@ -5,7 +5,6 @@ class AfterSignupController < ApplicationController
 
   def show
     @user = current_user
-    @car_build = Car.new
     render_wizard
   end
 

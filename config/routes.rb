@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   resources :after_signup
 
+  resources :cars do
+    resources :build, controller: 'cars/build'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -12,7 +16,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/special' => 'home#special'
 
-  get '/after_signup/car_build' => 'after_signup#show', as: :car_build
+  # get '/after_signup/car_build' => 'after_signup#show', as: :car_build
 
   get '/summary_page' => 'home#summary_page', as: :summary_page
 

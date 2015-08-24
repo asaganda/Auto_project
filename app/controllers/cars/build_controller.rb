@@ -10,7 +10,7 @@ class Cars::BuildController < ApplicationController
 
   def update
     @car = Car.find(params[:car_id])
-    @car.update_attributes(params[:car_id])
+    @car.update_attributes(car_params)
     render_wizard @car
   end
 

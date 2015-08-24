@@ -11,16 +11,4 @@ class AfterSignupController < ApplicationController
     render_wizard
   end
 
-  def update
-    @car = Car.find(car_params)
-    @car.update_attributes(params[:car])
-    render_wizard @car
-  end
-
-  # private
-  # def car_params
-  #   params.permit
-    
-  # end
-
 end

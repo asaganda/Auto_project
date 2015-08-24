@@ -11,9 +11,9 @@
     <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
     <nav>
       <ul>
-        <li><a href="http://localhost:3000/home/index">Home</a></li>
+        <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Make A New Car", car_build_path %></li>
-        <li><a href="">Dealers/Contacts</a></li>
+        <li><%= link_to "Make A New Dealer/Contact" %></li>
       </ul>
     </nav>
   <% end %>

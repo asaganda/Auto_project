@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get '/summary_page' => 'home#summary_page', as: :summary_page
 
+  get '/car/build' => 'cars#show', as: :car_build
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

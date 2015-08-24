@@ -1,4 +1,9 @@
 class CarsController < ApplicationController
+  
+  def summary_page
+    @car = Car.all
+  end
+
   def new
     @car = Car.new
   end
@@ -7,7 +12,8 @@ class CarsController < ApplicationController
     @car = Car.create(car_params)
 
     #this will break unless car has user_id
-    @car.user = current_user
+    # binding.pry
+    @car.user_id = current_user.id
     @car.save
 
     if params[:onboarding].present?
@@ -16,6 +22,11 @@ class CarsController < ApplicationController
       #change to summary page or something
       redirect_to root_path
     end
+  end
+
+  def update
+    @car = Car.find(car_params[:id])
+    @car.update_attributes(car_params)
   end
 
   private

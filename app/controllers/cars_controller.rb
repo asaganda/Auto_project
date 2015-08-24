@@ -24,6 +24,10 @@ class CarsController < ApplicationController
     end
   end
 
+  def show
+    @car = Car.new
+  end
+
   def update
     @car = Car.find(car_params[:id])
     @car.update_attributes(car_params)

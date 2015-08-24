@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations" }
 
-  resources :after_signup do
-    resources :cars
-  end
+  resources :after_signup
+
+  resources :cars
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -13,10 +13,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get '/special' => 'after_signup#special'
-
-  get '/after_signup/show' => 'after_signup#show'
-
-  get '/after_signup/car_build' => 'after_signup#show', as: :car_build
 
   get '/summary_page' => 'home#summary_page', as: :summary_page
 

@@ -1,4 +1,4 @@
-this is where i build my car
+this is where i build my car (for the 1st time)
 
 <%= form_for @car do |f| %>
     Car Make: <%= f.text_field :make %>
@@ -8,7 +8,6 @@ this is where i build my car
     Car Year: <%= f.text_field :year %>
     <br>
     Car Color: <%= f.text_field :color %>
-    <br>
     <%= hidden_field_tag :onboarding, :value => true %>
     <%= f.submit "Create" %>
 <% end %>

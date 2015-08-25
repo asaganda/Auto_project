@@ -1,4 +1,4 @@
-this is where i log my dealer contact (for the 1st time)
+this is where i add a new dealer contact (after i have already made my 1st one)
 
 <%= form_for @dealer do |f| %>
     Dealer Name: <%= f.text_field :name %>
@@ -10,7 +10,6 @@ this is where i log my dealer contact (for the 1st time)
     Dealer Salesperson: <%= f.text_field :salesperson %>
     <br>
     Dealer Telephone: <%= f.text_field :telephone %>
-<!--     <%= hidden_field_tag :onboarding, :value => true %> -->
+    <br>
     <%= f.submit "Create" %>
 <% end %>
-<%= link_to 'Finish', summary_page_path %>

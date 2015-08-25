@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'dealer/new'
 
   get 'dealer/create'
@@ -31,6 +32,8 @@ Rails.application.routes.draw do
   get '/summary_page' => 'home#summary_page', as: :summary_page
 
   get '/car/build' => 'cars#show', as: :car_build
+
+  get '/dealer/build' => 'dealers#show', as: :dealer_build
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,11 +1,12 @@
 <h2>CarNote/CarPad/whatever-name Summary</h2>
 
 <h3>Cars.....</h3>  
-<%= @car.each do |c| %>
-<!--   <% c.make %>
-  <% c.model %>
-  <% c.year %>
-  <% c.color %> -->
+<% @car.each do |c| %>
+  <%= c.make %>
+  <%= c.model %>
+  <%= c.year %>
+  <%= c.color %>
+  <br>
 <% end %>
 
 <h3>Dealers.....</h3>

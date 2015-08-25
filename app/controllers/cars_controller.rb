@@ -20,8 +20,12 @@ class CarsController < ApplicationController
       redirect_to after_signup_path(:dealer_contact)
     else
       #change to summary page or something
-      redirect_to root_path
+      redirect_to summary_page_path
     end
+  end
+
+  def show
+    @car = Car.new
   end
 
   def update

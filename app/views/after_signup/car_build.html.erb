@@ -1,10 +1,14 @@
 this is where i build my car
 
 <%= form_for @car do |f| %>
-    <%= f.text_field :make %>
-    <%= f.text_field :model %>
-    <%= f.text_field :year %>
-    <%= f.text_field :color %>
+    Car Make: <%= f.text_field :make %>
+    <br>
+    Car Model: <%= f.text_field :model %>
+    <br>
+    Car Year: <%= f.text_field :year %>
+    <br>
+    Car Color: <%= f.text_field :color %>
+    <br>
     <%= hidden_field_tag :onboarding, :value => true %>
     <%= f.submit "Create" %>
 <% end %>

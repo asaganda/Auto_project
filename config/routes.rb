@@ -18,8 +18,6 @@ Rails.application.routes.draw do
 
   get '/car/build' => 'cars#show', as: :car_build
 
-  delete '/summary_page' => 'cars#destroy'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

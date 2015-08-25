@@ -33,6 +33,8 @@ Rails.application.routes.draw do
 
   get '/car/build' => 'cars#show', as: :car_build
 
+  get '/dealer/build' => 'dealers#show', as: :dealer_build
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

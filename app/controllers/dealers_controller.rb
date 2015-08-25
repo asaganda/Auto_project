@@ -1,4 +1,4 @@
-class DealerController < ApplicationController
+class DealersController < ApplicationController
   
   # shows all the user's dealers that they have added to the database
   def summary_page
@@ -24,12 +24,12 @@ class DealerController < ApplicationController
     # this corresponds to users that have just signed up
     # [:onboarding] tag is in the dealer_build.html.erb ONLY for new users
     # once user creates their first dealer, they're redirected to dealer_contact
-    # if params[:onboarding].present?
-    #   redirect_to after_signup_path(:dealer_contact)
-    # else
-    #   # WAITING FOR COMMENT
-    #   redirect_to summary_page_path
-    # end
+    if params[:onboarding].present?
+      redirect_to after_signup_path(:dealer_contact)
+    else
+      # WAITING FOR COMMENT
+      redirect_to summary_page_path
+    end
   end
 
   def edit

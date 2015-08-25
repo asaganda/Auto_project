@@ -11,9 +11,9 @@
     <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
     <nav>
       <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Make A New Car", car_build_path %></li>
-        <li><%= link_to "Make A New Dealer/Contact" %></li>
+        <li><%= link_to "Home", summary_page_path %></li>
+        <li><%= link_to "Add A New Car", car_build_path %></li>
+        <li><%= link_to "Add A New Dealer/Contact", dealer_build_path %></li>
       </ul>
     </nav>
   <% end %>

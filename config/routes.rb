@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'dealer/new'
+
+  get 'dealer/create'
+
+  get 'dealer/edit'
+
+  get 'dealer/show'
+
+  get 'dealer/update'
+
+  get 'dealer/destroy'
+
   get 'home/index'
 
   devise_for :users, controllers: { registrations: "registrations" }
@@ -6,6 +18,8 @@ Rails.application.routes.draw do
   resources :after_signup
 
   resources :cars
+
+  resources :dealers
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

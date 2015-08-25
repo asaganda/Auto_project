@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'dealer/new'
 
   get 'dealer/create'

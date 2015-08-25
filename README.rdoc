@@ -1,6 +1,6 @@
 == README
 
-This application's objective is to consolidate a user's cars of interest for purchase as well as keep a log of auto dealers have been visited and with whom they have been communicating with.
+This application's objective is to consolidate/organize a user's cars of interest for purchase as well as keep a log of auto dealers/salespersons.
 
 
 

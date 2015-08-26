@@ -1,18 +1,18 @@
 this is where i build my car (for the 1st time)
 
-<%= form_for @car do |f| %>
-    Car Make: <%= f.text_field :make %>
-    <br>
-    Car Model: <%= f.text_field :model %>
-    <br>
-    Car Year: <%= f.text_field :year %>
-    <br>
-    Car Color: <%= f.text_field :color %>
-    <br>
-    Car Price($): <%= f.text_field :price %>
-    <%= hidden_field_tag :onboarding, :value => true %>
-    <%= f.submit "Create" %>
-<% end %>
+    <%= form_for @car do |f| %>
+        Car Make: <%= f.text_field :make %>
+        <br>
+        Car Model: <%= f.text_field :model %>
+        <br>
+        Car Year: <%= f.text_field :year %>
+        <br>
+        Car Color: <%= f.text_field :color %>
+        <br>
+        Car Price($): <%= f.text_field :price %>
+        <%= hidden_field_tag :onboarding, :value => true %>
+        <%= f.submit "Create" %>
+    <% end %>
 
-<!-- maybe use this next button for when user wants to skip this section -->
-<%= link_to 'Next', next_wizard_path %>
+    <!-- maybe use this next button for when user wants to skip this section -->
+    <%= link_to 'Next', next_wizard_path %>

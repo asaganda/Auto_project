@@ -1,3 +1,15 @@
-// Place all the styles related to the home controller here.
+/*// Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+body {
+  background: url('dashboard.jpg') no-repeat center center fixed;
+  background-size: 100%;
+  color: pink;
+}
+
+/*#car-bg {
+  background: url('Ford_homepage') no-repeat center center fixed;
+  background-size: cover;
+  height: 702px;
+}*/

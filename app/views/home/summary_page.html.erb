@@ -6,6 +6,7 @@
   <%= c.model %>
   <%= c.year %>
   <%= c.color %>
+  <%= number_to_currency(c.price) %>
   <%= link_to "Delete", car_path(c), method: :delete %>
   <%= link_to "Edit", edit_car_path(c) %>
   <br>

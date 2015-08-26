@@ -8,6 +8,8 @@ this is where i build my car (for the 1st time)
     Car Year: <%= f.text_field :year %>
     <br>
     Car Color: <%= f.text_field :color %>
+    <br>
+    Car Price($): <%= f.text_field :price %>
     <%= hidden_field_tag :onboarding, :value => true %>
     <%= f.submit "Create" %>
 <% end %>

@@ -9,6 +9,9 @@ gem 'wicked'
 # debugger
 gem 'pry-rails'
 
+# Ruby wrapper for the Edmunds Vehicle API (V1)
+gem 'edmunds_ruby'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record

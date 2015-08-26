@@ -7,7 +7,7 @@ this is where i add a new car (after i have already made my 1st one)
     <br>
     Car Model: <%= f.text_field :model %>
     <br>
-    Car Year: <%= f.text_field :year %>
+    Car Year: <%= f.select :year, (1990..2016) %>
     <br>
     Car Color: <%= f.text_field :color %>
     <br>

@@ -27,7 +27,9 @@ class DealersController < ApplicationController
     if params[:onboarding].present?
       redirect_to after_signup_path(:dealer_contact)
     else
-      # WAITING FOR COMMENT
+      # if [:onboarding] hidden field tag isn't present
+      # then the user gets redirected to summary page
+      # (users signing in for the 2nd time + )
       redirect_to summary_page_path
     end
   end

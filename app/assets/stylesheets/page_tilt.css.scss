@@ -44,7 +44,9 @@ body {
   pointer-events: auto;
   position: relative;
   z-index: 3;
-  background-color: white;
+  background: url('dashboard.jpg') no-repeat center center fixed;
+  background-size: 100%;
+  /*background-color: white;*/
   box-shadow: 0 0 20px rgba(black, 0.7);
   transform-origin: center 70%;
   transition: all 0.3s ease;

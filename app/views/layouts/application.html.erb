@@ -28,25 +28,28 @@
             <section>
               <%= yield %>
             </section>
-            <section></section>
-            <section></section>
-            <section></section>
           </div><!-- container div -->
       </div><!-- paper-front div -->
     </div><!-- paper-window div -->
-
+  <% else %>
+    <div id="paper-back">
+    </div><!-- paper-back div -->
+    <div id="paper-window">
+      <div id="paper-front">
+          <div id="container">
+            <section>
+                <nav>
+                  <ul>
+                    <li><%= link_to "Sign Up!", new_user_session_path %></li>
+                    <li><%= link_to "Sign In!", new_user_registration_path %></li>
+                  </ul>
+                </nav>
+              <%= yield %>
+            </section>
+          </div><!-- container div -->
+      </div><!-- paper-front div -->
+    </div><!-- paper-window div -->
   <% end %>
-
-  <% if !user_signed_in? %>
-    <nav>
-      <ul>
-        <li><a href="http://localhost:3000/users/sign_up" title="">Sign Up!</a></li>
-        <li><a href="http://localhost:3000/users/sign_in" title="">Sign In!</a></li>
-      </ul>
-    </nav>
-  <% end %>
-
-
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 

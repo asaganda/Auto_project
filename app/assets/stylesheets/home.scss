@@ -2,14 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-body {
-  background: url('dashboard.jpg') no-repeat center center fixed;
-  background-size: 100%;
-  color: pink;
+#landing-bg {
+/*  background: url('dashboard.jpg') no-repeat center center fixed;
+  background-size: 100%;*/
+  width: 100vw;
+  height: 100vh;
+  color: white;
 }
 
-/*#car-bg {
-  background: url('Ford_homepage') no-repeat center center fixed;
-  background-size: cover;
-  height: 702px;
-}*/
+#summary {
+  color: white;
+}

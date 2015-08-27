@@ -7,7 +7,7 @@ gem 'devise'
 gem 'wicked'
 
 # debugger
-gem 'pry-rails'
+# gem 'pry-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'

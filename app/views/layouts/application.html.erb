@@ -9,15 +9,32 @@
 </head>
 <body>
   <% if user_signed_in? %>
-    <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Summary", summary_page_path %></li>
-        <li><%= link_to "Add A New Car", car_build_path %></li>
-        <li><%= link_to "Add A New Dealer", dealer_build_path %></li>
-      </ul>
-    </nav>
+    <div id="paper-back">
+      <nav>
+        <div class="close"></div>
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Summary", summary_page_path %></li>
+            <li><%= link_to "Add A New Car", car_build_path %></li>
+            <li><%= link_to "Add A New Dealer", dealer_build_path %></li>
+            <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
+          </ul><!-- un-ordered list -->
+      </nav><!-- nav section -->
+    </div><!-- paper-back div -->
+    <div id="paper-window">
+      <div id="paper-front">
+        <div class="hamburger"><span></span></div>
+          <div id="container">
+            <section>
+              <%= yield %>
+            </section>
+            <section></section>
+            <section></section>
+            <section></section>
+          </div><!-- container div -->
+      </div><!-- paper-front div -->
+    </div><!-- paper-window div -->
+
   <% end %>
 
   <% if !user_signed_in? %>
@@ -32,7 +49,6 @@
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <%= yield %>
 
 </body>
 </html>

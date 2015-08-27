@@ -7,7 +7,7 @@ gem 'devise'
 gem 'wicked'
 
 # debugger
-gem 'pry-rails'
+# gem 'pry-rails'
 
 # Ruby wrapper for the Edmunds Vehicle API (V1)
 gem 'edmunds_ruby'

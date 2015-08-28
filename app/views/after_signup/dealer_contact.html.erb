@@ -1,16 +1,19 @@
-this is where i log my dealer contact (for the 1st time)
+<div class="form">
+<h2>Add First Dealer:</h2>
 
 <%= form_for @dealer do |f| %>
-    Dealer Name: <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder => "Dealer Name" %>
     <br>
-    Dealer Town: <%= f.text_field :town %>
+    <%= f.text_field :town, :placeholder => "Dealer City" %>
     <br>
-    Dealer State: <%= f.text_field :state %>
+    <%= f.text_field :state, :placeholder => "Dealer State" %>
     <br>
-    Dealer Salesperson: <%= f.text_field :salesperson %>
+    <%= f.text_field :salesperson, :placeholder => "Salesperson" %>
     <br>
-    Dealer Telephone: <%= f.text_field :telephone %>
-<!--     <%= hidden_field_tag :onboarding, :value => true %> -->
+    <%= f.text_field :telephone, :placeholder => "Phone" %>
+    <br>
     <%= f.submit "Create" %>
-<% end %>
-<%= link_to 'Finish', summary_page_path %>
+<% end %><!-- 
+this can be used for a user that doesn't want to put in information at this stage
+<%= link_to 'Finish', summary_page_path %> -->
+</div>

@@ -3,16 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 #landing-bg {
-/*  background: url('dashboard.jpg') no-repeat center center fixed;
-  background-size: 100%;*/
   width: 100vw;
   height: 100vh;
   color: white;
 }
 
 #summary {
-  color: white;
+  margin: 0 auto;
+  width: 500px;
+  background: white;
+  opacity: 0.8;
+  border-radius: 15px;
 }
+
 
 #add_car {
  color: white;

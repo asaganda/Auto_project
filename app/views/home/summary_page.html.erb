@@ -8,8 +8,8 @@
     <%= c.year %>
     <%= c.color %>
     <%= number_to_currency(c.price) %>
-    <%= link_to "Delete", car_path(c), method: :delete %>
-    <%= link_to "Edit", edit_car_path(c) %>
+    <button class="btn btn-primary btn-xs"><%= link_to "Delete", car_path(c), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_car_path(c) %></button>
+    <br>
     <br>
   <% end %>
 
@@ -20,8 +20,8 @@
     <%= d.state %>
     <%= d.salesperson %>
     <%= d.telephone %>
-    <%= link_to "Delete", dealer_path(d), method: :delete %>
-    <%= link_to "Edit", edit_dealer_path(d) %>
+    <button class="btn btn-primary btn-xs"><%= link_to "Delete", dealer_path(d), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_dealer_path(d) %></button>
+    <br>
     <br>
   <% end %>
 </div>

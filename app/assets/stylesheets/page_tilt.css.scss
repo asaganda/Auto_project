@@ -59,14 +59,9 @@ body {
     /*changed this height so that the dashboard pic would show properly*/
     height: 690px;
     text-align: center;
-    nav {
-      ul {
-        li {
-          a {
-            color: white;
-          }
-        }
-      }
+    /*sign up and in links white color*/
+    a {
+      color: white;
     }
     &:first-of-type {
       padding-top: 10vh;  

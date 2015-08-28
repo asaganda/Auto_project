@@ -1,3 +1,4 @@
+/*changed this color*/
 $primary-color: white;
 
 body {
@@ -44,6 +45,7 @@ body {
   pointer-events: auto;
   position: relative;
   z-index: 3;
+  /*this is the dashboard pic which is across all pages*/
   background: url('dashboard.jpg') no-repeat center center fixed;
   background-size: 100%;
   box-shadow: 0 0 20px rgba(black, 0.7);
@@ -54,8 +56,18 @@ body {
 //actual content
 #container {
   section {
+    /*changed this height so that the dashboard pic would show properly*/
     height: 690px;
     text-align: center;
+    nav {
+      ul {
+        li {
+          a {
+            color: white;
+          }
+        }
+      }
+    }
     &:first-of-type {
       padding-top: 10vh;  
       h1 { font-size: 45px; }
@@ -117,6 +129,7 @@ body {
       width: 45px;
       height: 6px;
       top: 50%;
+      /*changed this color*/
       background-color: blue;
       border-radius: 2px;
     }

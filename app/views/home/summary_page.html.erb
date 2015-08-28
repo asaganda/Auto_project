@@ -21,7 +21,7 @@
     <%= d.state %>
     <%= d.salesperson %>
     <%= d.telephone %>
-    <button class="btn btn-primary btn-sm"><%= link_to "Delete", dealer_path(d), method: :delete %></button>
+    <button class="btn btn-primary btn-sm"><%= link_to "Delete", dealer_path(d), method: :delete, data: { confirm: 'Are you sure?'} %></button>
     <button class="btn btn-primary btn-sm"><%= link_to "Edit", edit_dealer_path(d) %></button>
     <br>
     <br>

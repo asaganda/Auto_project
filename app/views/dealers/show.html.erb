@@ -1,15 +1,17 @@
-this is where i add a new dealer contact (after i have already made my 1st one)
-
-<%= form_for @dealer do |f| %>
-    Dealer Name: <%= f.text_field :name %>
-    <br>
-    Dealer Town: <%= f.text_field :town %>
-    <br>
-    Dealer State: <%= f.text_field :state %>
-    <br>
-    Dealer Salesperson: <%= f.text_field :salesperson %>
-    <br>
-    Dealer Telephone: <%= f.text_field :telephone %>
-    <br>
-    <%= f.submit "Create" %>
-<% end %>
+<link rel="stylesheet" type="text/scss" href="dealer.scss">
+<div id="add_dealer">
+<h2>Add Dealer</h2>
+    <%= form_for @dealer do |f| %>
+        <%= f.text_field :name, :placeholder => "Name" %>
+        <br>
+        <%= f.text_field :town, :placeholder => "Town" %>
+        <br>
+        <%= f.text_field :state, :placeholder => "State" %>
+        <br>
+        <%= f.text_field :salesperson, :placeholder => "Salesperson" %>
+        <br>
+        <%= f.text_field :telephone, :placeholder => "Telephone" %>
+        <br>
+        <%= f.submit "Create" %>
+    <% end %>
+</div>

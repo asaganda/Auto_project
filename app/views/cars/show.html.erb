@@ -1,17 +1,17 @@
 <link rel="stylesheet" type="text/scss" href="home.scss">
 <div id="add_car">
 <h2>Add Car</h2>
-<%= form_for @car do |f| %>
-    <%= f.text_field :make, :placeholder => "Make" %>
-    <br>
-    <%= f.text_field :model, :placeholder => "Model" %>
-    <br>
-    Car Year: <%= f.select(:year, 1990..2016) %>
-    <br>
-    <%= f.text_field :color, :placeholder => "Color" %>
-    <br>
-    <%= f.text_field :price, :placeholder => "Price" %>
-    <br>
-    <%= f.submit "Create" %>
-<% end %>
+    <%= form_for @car do |f| %>
+        <%= f.text_field :make, :placeholder => "Make" %>
+        <br>
+        <%= f.text_field :model, :placeholder => "Model" %>
+        <br>
+        Car Year: <%= f.select(:year, 1990..2016) %>
+        <br>
+        <%= f.text_field :color, :placeholder => "Color" %>
+        <br>
+        <%= f.text_field :price, :placeholder => "Price" %>
+        <br>
+        <%= f.submit "Create" %>
+    <% end %>
 </div>

@@ -1,15 +1,17 @@
+<div class="form">
 Edit Dealer:
 
 <%= form_for @dealer do |f| %>
-    Dealer Name: <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder => "Name" %>
     <br>
-    Dealer Town: <%= f.text_field :town %>
+    <%= f.text_field :town, :placeholder => "City" %>
     <br>
-    Dealer State: <%= f.text_field :state %>
+    <%= f.text_field :state, :placeholder => "State" %>
     <br>
-    Dealer Salesperson: <%= f.text_field :salesperson %>
+    <%= f.text_field :salesperson, :placeholder => "Salesperson" %>
     <br>
-    Dealer Telephone: <%= f.text_field :telephone %>
+    <%= f.text_field :telephone, :placeholder => "Phone" %>
     <br>
     <%= f.submit "Update" %>
 <% end %>
+</div>

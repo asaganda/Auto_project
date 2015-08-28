@@ -1,15 +1,22 @@
+<style>
+    #edit_car{
+        color: white;
+    }
+</style>
+<div id="edit_car">
 Edit Car:
 
 <%= form_for @car do |f| %>
-    Car Make: <%= f.text_field :make %>
+    <%= f.text_field :make, :placeholder => "Make" %>
     <br>
-    Car Model: <%= f.text_field :model %>
+    <%= f.text_field :model, :placeholder => "Model" %>
     <br>
-    Car Year: <%= f.select :year, (1990..2016) %>
+    <%= f.select :year, (1990..2016) %>
     <br>
-    Car Color: <%= f.text_field :color %>
+    <%= f.text_field :color, :placeholder => "Color" %>
     <br>
-    Car Price($): <%= f.text_field :price %>
+    <%= f.text_field :price, :placeholder => "Price($)" %>
     <br>
     <%= f.submit "Update" %>
 <% end %>
+</div>

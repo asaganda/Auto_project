@@ -1,12 +1,12 @@
-<link rel="stylesheet" type="text/scss" href="home.scss">
-<div id="add_car">
-<h2>Add Car:</h2>
+<link rel="stylesheet" type="text/css" href="cars.css"></link>
+<div>
+<h2 id="add_car">Add Car:</h2>
     <%= form_for @car do |f| %>
         <%= f.text_field :make, :placeholder => "Make" %>
         <br>
         <%= f.text_field :model, :placeholder => "Model" %>
         <br>
-        Car Year: <%= f.select(:year, 1990..2016) %>
+        <span id="car_year">Car Year: <%= f.select(:year, 1990..2016) %></span>
         <br>
         <%= f.text_field :color, :placeholder => "Color" %>
         <br>

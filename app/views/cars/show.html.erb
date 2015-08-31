@@ -1,17 +1,23 @@
-<link rel="stylesheet" type="text/css" href="cars.css"></link>
-<div>
+<!-- <link rel="stylesheet" type="text/css" href="cars.css"> -->
+<style>
+    #form_add_car{
+        width: 100px;
+        margin: 0 auto;
+    }
+</style>
 <h2 id="add_car">Add Car:</h2>
-    <%= form_for @car do |f| %>
-        <%= f.text_field :make, :placeholder => "Make" %>
-        <br>
-        <%= f.text_field :model, :placeholder => "Model" %>
-        <br>
-        <span id="car_year">Car Year: <%= f.select(:year, 1990..2016) %></span>
-        <br>
-        <%= f.text_field :color, :placeholder => "Color" %>
-        <br>
-        <%= f.text_field :price, :placeholder => "Price" %>
-        <br>
-        <%= f.submit "Create", :class => "btn btn-primary btn-xs" %>
-    <% end %>
-</div>
+    <div id="form_add_car">
+        <%= form_for @car do |f| %>
+            <input id="form_add_car" class="form-control input-lg" type="text" <%= f.text_field :make, :placeholder => "Make" %>
+            <br>
+            <input id="form_add_car" class="form-control input-lg" type="text" <%= f.text_field :model, :placeholder => "Model" %>
+            <br>
+            <span id="car_year">Car Year: <%= f.select(:year, 1990..2016) %></span>
+            <br>
+            <input id="form_add_car" class="form-control input-lg" type="text" <%= f.text_field :color, :placeholder => "Color" %>
+            <br>
+            <input id="form_add_car" class="form-control input-lg" type="text" <%= f.text_field :price, :placeholder => "Price" %>
+            <br>
+            <%= f.submit "Create", :class => "btn btn-primary btn-lg" %>
+        <% end %>
+    </div>

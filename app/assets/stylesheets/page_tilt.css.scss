@@ -60,10 +60,15 @@ body {
     /*changed this height so that the dashboard pic would show properly*/
     height: 780px;
     text-align: center;
+    padding-top: 10vh;
+    h1 { font-size: 45px; }
+    p { font-size: 25px; }
     /*sign up and in links white color*/
     a {
       color: white;
     }
+
+    /*Codepen was using this because they're example had several sections which i took out*/
     &:first-of-type {
       padding-top: 10vh;  
       h1 { font-size: 45px; }
@@ -74,9 +79,10 @@ body {
         p { font-size: 18px; }
       }
     }
-    &:nth-of-type(2n) {
+    /*&:nth-of-type(2n) {
       background-color: lighten($primary-color, 75%);
-    }
+    }*/
+  
   }
 }
 

@@ -2,10 +2,7 @@
   color: white; 
 }
 
-/*#form_add_car{
+#form_add_car{
+  width: 100px;
   margin: 0 auto;
-}*/
-
-/*.col-xs-2{
-  margin: 0 auto;
-}*/
+}

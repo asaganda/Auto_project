@@ -23,16 +23,14 @@
       </nav><!-- nav section -->
     </div><!-- paper-back div -->
     <div id="paper-window">
-        <div id="paper-front">
-          <!-- <div id="overlay"> -->
-          <div class="hamburger"><span></span></div>
-            <div id="container">
-              <section>
-                <%= yield %>
-              </section>
-            </div><!-- container div -->
-          <!-- </div> --><!-- overlay div -->
-        </div><!-- paper-front div -->
+      <div id="paper-front">
+        <div class="hamburger"><span></span></div>
+          <div id="container">
+            <section>
+              <%= yield %>
+            </section>
+          </div><!-- container div -->
+      </div><!-- paper-front div -->
     </div><!-- paper-window div -->
   <% else %>
     <div id="paper-back">

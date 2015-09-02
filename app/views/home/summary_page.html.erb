@@ -1,7 +1,7 @@
 <div id="summary">
   <h2>Dashboard Summary</h2>
 
-  <h3>Cars.....</h3>  
+  <h3>Cars:</h3>  
   <% @car.each do |c| %>
     <%= c.make %>
     <%= c.model %>
@@ -13,7 +13,7 @@
     <br>
   <% end %>
 
-  <h3>Dealers.....</h3>
+  <h3>Dealers:</h3>
   <% @dealer.each do |d| %>
     <%= d.name %>
     <%= d.town %>

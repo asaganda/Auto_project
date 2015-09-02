@@ -1,10 +1,10 @@
-#add_car{ 
+/*#add_car{ 
   color: white;
-}
+}*/
 
-#car_year{
+/*#car_year{
   color: white;
-}
+}*/
 
 #year{
   display: inline;
@@ -19,13 +19,13 @@
   margin-top: 50px;
 }
 
-/*#form_add_car {
-  width: 100%;
+#new_car_form {
+  margin: 0 auto;
+  width: 50%;
   background: white;
   opacity: 0.8;
   border-radius: 15px;
-}*/
-
+}
 
 select#car_year{
   font-size: 25px;

@@ -22,6 +22,7 @@ input{
 #new_car_form {
   margin: 0 auto;
   width: 35%;
+  height: 450px;
   background: white;
   opacity: 0.8;
   border-radius: 15px;

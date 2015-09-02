@@ -2,9 +2,9 @@
   color: white;
 }*/
 
-/*#car_year{
-  color: white;
-}*/
+input{
+  background-color: white;
+}
 
 #year{
   display: inline;
@@ -21,7 +21,7 @@
 
 #new_car_form {
   margin: 0 auto;
-  width: 50%;
+  width: 35%;
   background: white;
   opacity: 0.8;
   border-radius: 15px;

@@ -39,13 +39,17 @@
       <div id="paper-front">
           <div id="container">
             <section>
-                <nav>
-                  <ul>
-                    <li><%= link_to "Sign Up!", new_user_registration_path %></li>
-                    <li><%= link_to "Sign In!", new_user_session_path %></li>
-                  </ul>
-                </nav>
               <%= yield %>
+                <!-- <nav> -->
+                  <div id="sign_up_in">
+                    <div class="btn btn-primary btn-lg linksss">
+                      <%= link_to "Sign Up!", new_user_registration_path %>
+                    </div>
+                    <div class="btn btn-primary btn-lg linksss">
+                      <%= link_to "Sign In!", new_user_session_path %>
+                    </div>
+                  </div>
+                <!-- </nav> -->
             </section>
           </div><!-- container div -->
       </div><!-- paper-front div -->

@@ -1,16 +1,21 @@
-<div class="form">
-<h2>Add Dealer:</h2>
-    <%= form_for @dealer do |f| %>
-        <%= f.text_field :name, :placeholder => "Name" %>
+<div id="new_dealer_form">
+    <div class="form_add_dealer">
+        <h2>Add Dealer:</h2>
         <br>
-        <%= f.text_field :town, :placeholder => "Town" %>
-        <br>
-        <%= f.text_field :state, :placeholder => "State" %>
-        <br>
-        <%= f.text_field :salesperson, :placeholder => "Salesperson" %>
-        <br>
-        <%= f.text_field :telephone, :placeholder => "Telephone" %>
-        <br>
-        <%= f.submit "Create", :class => "btn btn-primary btn-xs" %>
-    <% end %>
+        <div id="form_add_dealer">
+            <%= form_for @dealer do |f| %>
+                <input class="form-control input-lg" type="text" <%= f.text_field :name, :placeholder => "Name" %>
+                <br>
+                <input class="form-control input-lg" type="text" <%= f.text_field :town, :placeholder => "Town" %>
+                <br>
+                <input class="form-control input-lg" type="text" <%= f.text_field :state, :placeholder => "State" %>
+                <br>
+                <input class="form-control input-lg" type="text" <%= f.text_field :salesperson, :placeholder => "Salesperson" %>
+                <br>
+                <input class="form-control input-lg" type="text" <%= f.text_field :telephone, :placeholder => "Telephone" %>
+                <br>
+                <%= f.submit "Create", :class => "btn btn-primary btn-lg" %>
+            <% end %>
+        </div>
+    </div>
 </div>

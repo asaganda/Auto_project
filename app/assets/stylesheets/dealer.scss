@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.form{
-  color: white;
+#new_dealer_form {
+  margin: 0 auto;
+  width: 35%;
+  height: 450px;
+  background: white;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.form_dealer_car{
+  margin-top: 50px;
+}
+
+#form_add_dealer{
+  width: 160px;
+  margin: 0 auto;
 }

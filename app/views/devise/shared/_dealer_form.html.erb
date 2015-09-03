@@ -1,0 +1,13 @@
+<%= form_for @dealer do |f| %>
+    <input class="form-control input-lg" type="text" <%= f.text_field :name, :placeholder => "Name" %>
+    <br>
+    <input class="form-control input-lg" type="text" <%= f.text_field :town, :placeholder => "Town" %>
+    <br>
+    <input class="form-control input-lg" type="text" <%= f.text_field :state, :placeholder => "State" %>
+    <br>
+    <input class="form-control input-lg" type="text" <%= f.text_field :salesperson, :placeholder => "Salesperson" %>
+    <br>
+    <input class="form-control input-lg" type="text" <%= f.text_field :telephone, :placeholder => "Telephone" %>
+    <br>
+    <%= f.submit "Create", :class => "btn btn-primary btn-lg" %>
+<% end %>

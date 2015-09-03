@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#new_dealer_form {
+#new_dealer_form, #edit_dealer_form {
   margin: 0 auto;
   width: 35%;
   height: 450px;
@@ -11,11 +11,11 @@
   border-radius: 15px;
 }
 
-.form_dealer_car{
+.form_dealer_car, .form_edit_dealer{
   margin-top: 50px;
 }
 
-#form_add_dealer{
+#form_add_dealer, #form_edit_dealer{
   width: 160px;
   margin: 0 auto;
 }

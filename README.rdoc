@@ -1,6 +1,7 @@
 == README
 
 Dashboard: Organizational platform app
+
 Objective: Consolidate/organize users cars of interest for purchase as well as keep a log of auto dealers/salespersons
 
 

@@ -1,8 +1,7 @@
 == README
 
-This application's objective is to consolidate/organize a user's cars of interest for purchase as well as keep a log of auto dealers/salespersons.
-
-
+Dashboard: Organizational platform app
+Objective: Consolidate/organize users cars of interest for purchase as well as keep a log of auto dealers/salespersons
 
 
 This README would normally document whatever steps are necessary to get the

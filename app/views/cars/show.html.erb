@@ -1,22 +1,9 @@
 <div id="new_car_form">
     <div class="form_add_car">
-        <h2 id="add_car">Add Car:</h2>
+        <h2>Add Car:</h2>
         <br>
         <div id="form_add_car">
-            <%= form_for @car do |f| %>
-                <input class="form-control input-lg" type="text" <%= f.text_field :make, :placeholder => "Make" %>
-                <br>
-                <input class="form-control input-lg" type="text" <%= f.text_field :model, :placeholder => "Model" %>
-                <br>
-                <span id="car_year"><h3 id="year">Year:</h3> <%= f.select(:year, 1990..2016) %></span>
-                <br>
-                <br>
-                <input class="form-control input-lg" type="text" <%= f.text_field :color, :placeholder => "Color" %>
-                <br>
-                <input class="form-control input-lg" type="text" <%= f.text_field :price, :placeholder => "Price" %>
-                <br>
-                <%= f.submit "Create", :class => "btn btn-primary btn-lg" %>
-            <% end %>
+            <%= render "devise/shared/car_form" %>
         </div>
     </div>
 </div>

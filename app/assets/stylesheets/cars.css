@@ -2,16 +2,16 @@
   display: inline;
 }
 
-#form_add_car{
+#form_add_car, #form_edit_car{
   width: 160px;
   margin: 0 auto;
 }
 
-.form_add_car{
+.form_add_car, .form_edit_car{
   margin-top: 50px;
 }
 
-#new_car_form {
+#new_car_form, #edit_car_form {
   margin: 0 auto;
   width: 35%;
   height: 450px;

@@ -1,22 +1,9 @@
-<style>
-    #edit_car{
-        color: white;
-    }
-</style>
-<div id="edit_car">
-Edit Car:
-
-<%= form_for @car do |f| %>
-    <%= f.text_field :make, :placeholder => "Make" %>
-    <br>
-    <%= f.text_field :model, :placeholder => "Model" %>
-    <br>
-    <%= f.select :year, (1990..2016) %>
-    <br>
-    <%= f.text_field :color, :placeholder => "Color" %>
-    <br>
-    <%= f.text_field :price, :placeholder => "Price($)" %>
-    <br>
-    <%= f.submit "Update" %>
-<% end %>
+<div id="edit_car_form">
+    <div class="form_edit_car">
+        <h2>Edit Car:</h2>
+        <br>
+        <div id="form_edit_car">
+            <%= render "devise/shared/car_form" %>
+        </div>
+    </div>
 </div>

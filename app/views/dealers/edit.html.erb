@@ -1,17 +1,9 @@
-<div class="form">
-Edit Dealer:
-
-<%= form_for @dealer do |f| %>
-    <%= f.text_field :name, :placeholder => "Name" %>
-    <br>
-    <%= f.text_field :town, :placeholder => "City" %>
-    <br>
-    <%= f.text_field :state, :placeholder => "State" %>
-    <br>
-    <%= f.text_field :salesperson, :placeholder => "Salesperson" %>
-    <br>
-    <%= f.text_field :telephone, :placeholder => "Phone" %>
-    <br>
-    <%= f.submit "Update" %>
-<% end %>
+<div id="edit_dealer_form">
+    <div class="form_edit_dealer">  
+        <h2>Edit Dealer:</h2>
+        <br>
+        <div id="form_edit_dealer">
+            <%= render "devise/shared/dealer_form" %>
+        </div>
+    </div>
 </div>

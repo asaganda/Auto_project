@@ -32,11 +32,18 @@ p.notice{
 
 .linksss{
   width: 120px;
-  margin: 0 auto
+  margin: 0 auto;
+  background-color: black;
 }
 
 .btn-lg{
   margin: 11px;
+}
+
+/*using important here because i am unable to override bootstrap default*/ 
+.btn-primary{
+  background-color: black !important;
+  border-width: 2px !important;
 }
 
 /*this resets padding and margin*/

@@ -44,6 +44,9 @@ p.notice{
 .btn-primary{
   background-color: black !important;
   border-width: 2px !important;
+  &:hover{
+    background-color: #337AB7 !important;
+  }
 }
 
 /*this resets padding and margin*/

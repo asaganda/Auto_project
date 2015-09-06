@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// what makes the animation work
 $(document).ready(function(){
   $('#welcome').addClass('animated lightSpeedIn');
 });

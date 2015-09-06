@@ -68,8 +68,8 @@ p.notice{
   padding-bottom: 11px;
 }
 
-/*Login sign in form*/
-#Login_form .input-lg{
+/*Login sign in and sign up form*/
+#Login_form, #Sign_up .input-lg{
   width: 180px;
   margin: 0 auto;
   margin-top: 10px;
@@ -95,6 +95,15 @@ p.notice{
   -ms-animation-delay: 1s;
   -webkit-animation-duration: 2s;
   -webkit-animation-delay: 1s;
+}
+
+#Sign_up{
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 30%;
+  background: white;
+  opacity: 0.8;
+  border-radius: 15px;
 }
 
 /*this resets padding and margin*/

@@ -14,8 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$("#Login_form").click(function(){
-  $("#sign_up_in").hide();
-  console.log("it works")
-});

@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
 p.alert {
   padding: 0px; 
   margin-bottom: 0px; 
@@ -25,21 +25,25 @@ p.notice{
   margin: 0px; 
 }
 
+/*Sign up/in div on landing page*/
 #sign_up_in{
   margin-top: 50px;
   padding-left: 0px;
 }
 
+/*Sign up and Sign in button links on landing page*/
 .linksss{
   width: 120px;
   margin: 0 auto;
   background-color: black;
 }
 
+/*ALL Buttons*/
 .btn-lg{
   margin: 11px;
 }
 
+/*ALL Buttons*/
 /*using important here because i am unable to override bootstrap default*/ 
 .btn-primary{
   background-color: black !important;
@@ -47,6 +51,37 @@ p.notice{
   &:hover{
     background-color: #337AB7 !important;
   }
+}
+
+/*sign in form sitewide theme applied*/
+#sign_in_form{
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 30%;
+  background: white;
+  opacity: 0.8;
+  border-radius: 15px; 
+}
+
+/*Login sign in form*/
+#Login_form{
+  padding-bottom: 11px;
+}
+
+/*Login sign in form*/
+#Login_form .input-lg{
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/*Button for edit dealer page*/
+#form_edit_dealer .btn-lg{
+  margin: 0px;
+}
+
+#form_add_dealer .btn-lg{
+  margin: 0px;
 }
 
 /*this resets padding and margin*/

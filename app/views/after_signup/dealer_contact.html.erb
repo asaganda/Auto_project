@@ -1,19 +1,15 @@
-<div class="form">
-<h2>Add First Dealer:</h2>
+<div id="first_dealer_form">
+    <div class="first_dealer_form">
+        <h2>Add First Dealer:</h2>
+        <br>
+        <div id="first_dealer">
+            <%= render "devise/shared/dealer_form" %>
+            
+            <!-- user clicks this when they are done the last page (adding a dealer contact) -->
+            <%= link_to 'Finish', summary_page_path, :class => "btn btn-primary btn-lg" %>
 
-<%= form_for @dealer do |f| %>
-    <%= f.text_field :name, :placeholder => "Dealer Name" %>
-    <br>
-    <%= f.text_field :town, :placeholder => "Dealer City" %>
-    <br>
-    <%= f.text_field :state, :placeholder => "Dealer State" %>
-    <br>
-    <%= f.text_field :salesperson, :placeholder => "Salesperson" %>
-    <br>
-    <%= f.text_field :telephone, :placeholder => "Phone" %>
-    <br>
-    <%= f.submit "Create" %>
-<% end %><!-- 
-this can be used for a user that doesn't want to put in information at this stage
-<%= link_to 'Finish', summary_page_path %> -->
+            <!-- skip button for when user wants to skip this section/doesn't want to input information -->
+            <%= link_to 'Skip', summary_page_path, :class => "btn btn-primary btn-lg" %>
+        </div>
+    </div>
 </div>

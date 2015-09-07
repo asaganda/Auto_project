@@ -2,19 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#first_car{
+#first_car, #first_dealer{
   width: 160px;
   margin: 0 auto;
 }
 
-.first_car_form{
+.first_car_form, .first_dealer_form{
   margin-top: 50px;
 }
 
-#first_car_form {
+#first_car_form, #first_dealer_form {
   margin: 0 auto;
   width: 35%;
-  height: 515px;
+  height: 460px;
   background: white;
   opacity: 0.8;
   border-radius: 15px;

@@ -14,7 +14,6 @@
 #first_car_form, #first_dealer_form {
   margin: 0 auto;
   width: 35%;
-  /*height: 460px;*/
   background: white;
   opacity: 0.8;
   border-radius: 15px;
@@ -23,6 +22,11 @@
 /*this moves the white opacity height*/
 #first_car_form{
   height: 450px;
+}
+
+/*this moves the white opacity height*/
+#first_dealer_form{
+  height: 530px;
 }
 
 /*save button for first car form*/

@@ -14,6 +14,20 @@
  *= require_self
  */
 
+/*FerroRosso font*/
+@font-face{
+  font-family: 'FerroRosso';
+  src: url('FerroRosso.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'Remarcle';
+  src: url('Remarcle.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'RemarcleRight';
+  src: url('RemarcleRight.ttf') format('truetype');
+}
+
 p.alert {
   padding: 0px; 
   margin-bottom: 0px; 

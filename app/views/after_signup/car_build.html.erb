@@ -1,21 +1,24 @@
-<div class="form">
-<h2>Add First Car:</h2>
-
-    <%= form_for @car do |f| %>
-        <%= f.text_field :make, :placeholder => "Make" %>
+<div id="first_car_form">
+    <div class="first_car_form">
+        <h2>Add First Car:</h2>
         <br>
-        <%= f.text_field :model, :placeholder => "Model" %>
-        <br>
-        <%= f.select :year, (1990..2016) %>
-        <br>
-        <%= f.text_field :color, :placeholder => "Color" %>
-        <br>
-        <%= f.text_field :price, :placeholder => "Price($)" %>
-        <%= hidden_field_tag :onboarding, :value => true %>
-        <br>
-        <%= f.submit "Create" %>
-    <% end %>
-
-    <!-- maybe use this next button for when user wants to skip this section -->
-    <%= link_to 'Next', next_wizard_path %>
+        <div id="first_car">
+            <%= form_for @car do |f| %>
+                <input class="form-control input-lg" type="text" <%= f.text_field :make, :placeholder => "Make" %>
+                <br>
+                <input class="form-control input-lg" type="text" <%= f.text_field :model, :placeholder => "Model" %>
+                <br>
+                <span id="car_year"><h3 id="year">Year:</h3> <%= f.select(:year, 1990..2016) %></span>
+                <br>
+                <br>
+                <input class="form-control input-lg" type="text" <%= f.text_field :color, :placeholder => "Color" %>
+                <br>
+                <input class="form-control input-lg" type="text" <%= f.text_field :price, :placeholder => "Price" %>
+                <br>
+                <%= hidden_field_tag :onboarding, :value => true %>
+                <br>
+                <%= f.submit "Save", :class => "btn btn-primary btn-lg" %>
+            <% end %>
+        </div>
+    </div>
 </div>

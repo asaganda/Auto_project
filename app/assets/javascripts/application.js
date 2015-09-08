@@ -17,5 +17,5 @@
 
 // what makes the animation work
 $(document).ready(function(){
-  $('#welcome').addClass('animated lightSpeedIn');
+  $('#brand').addClass('animated lightSpeedIn');
 });

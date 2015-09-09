@@ -1,17 +1,32 @@
 <div id="summary">
   <h2>Dashboard Summary</h2>
 
-  <h3>Cars:</h3>  
-  <% @car.each do |c| %>
-    <%= c.make %>
-    <%= c.model %>
-    <%= c.year %>
-    <%= c.color %>
-    <%= number_to_currency(c.price) %>
-    <button class="btn btn-primary btn-xs"><%= link_to "Delete", car_path(c), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_car_path(c) %></button>
-    <br>
-    <br>
-  <% end %>
+  <h3>Cars:</h3>
+  <table class="table-bordered">
+    <thead>
+      <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>Price($)</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @car.each do |c| %>
+        <tr>
+          <td><%= c.make %></td>
+          <td><%= c.model %></td>
+          <td><%= c.year %></td>
+          <td><%= c.color %></td>
+          <td><%= number_to_currency(c.price) %></td>
+          <td><button class="btn btn-primary btn-xs"><%= link_to "Delete", car_path(c), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_car_path(c) %></button></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
 
   <h3>Dealers:</h3>
   <% @dealer.each do |d| %>

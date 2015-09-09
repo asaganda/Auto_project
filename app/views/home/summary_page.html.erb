@@ -25,18 +25,31 @@
         </tr>
       <% end %>
     </tbody>
-  </table>
+  </table><!-- table for user's cars(user that is signed in) -->
 
 
   <h3>Dealers:</h3>
-  <% @dealer.each do |d| %>
-    <%= d.name %>
-    <%= d.town %>
-    <%= d.state %>
-    <%= d.salesperson %>
-    <%= d.telephone %>
-    <button class="btn btn-primary btn-xs"><%= link_to "Delete", dealer_path(d), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_dealer_path(d) %></button>
-    <br>
-    <br>
-  <% end %>
-</div>
+    <table class="table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Town</th>
+        <th>State</th>
+        <th>Salesperson</th>
+        <th>Telephone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @dealer.each do |d| %>
+        <tr>
+          <td><%= d.name %></td>
+          <td><%= d.town %></td>
+          <td><%= d.state %></td>
+          <td><%= d.salesperson %></td>
+          <td><%= d.telephone %></td>
+          <td><button class="btn btn-primary btn-xs"><%= link_to "Delete", dealer_path(d), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_dealer_path(d) %></button></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table><!-- table for user's dealer contacts(user that is signed in) -->

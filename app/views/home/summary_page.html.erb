@@ -1,27 +1,55 @@
 <div id="summary">
   <h2>Dashboard Summary</h2>
 
-  <h3>Cars:</h3>  
-  <% @car.each do |c| %>
-    <%= c.make %>
-    <%= c.model %>
-    <%= c.year %>
-    <%= c.color %>
-    <%= number_to_currency(c.price) %>
-    <button class="btn btn-primary btn-xs"><%= link_to "Delete", car_path(c), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_car_path(c) %></button>
-    <br>
-    <br>
-  <% end %>
+  <h3>Cars:</h3>
+  <table class="table-bordered">
+    <thead>
+      <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>Price($)</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @car.each do |c| %>
+        <tr>
+          <td><%= c.make %></td>
+          <td><%= c.model %></td>
+          <td><%= c.year %></td>
+          <td><%= c.color %></td>
+          <td><%= number_to_currency(c.price) %></td>
+          <td><button class="btn btn-primary btn-xs"><%= link_to "Delete", car_path(c), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_car_path(c) %></button></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table><!-- table for user's cars(user that is signed in) -->
+
 
   <h3>Dealers:</h3>
-  <% @dealer.each do |d| %>
-    <%= d.name %>
-    <%= d.town %>
-    <%= d.state %>
-    <%= d.salesperson %>
-    <%= d.telephone %>
-    <button class="btn btn-primary btn-xs"><%= link_to "Delete", dealer_path(d), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_dealer_path(d) %></button>
-    <br>
-    <br>
-  <% end %>
-</div>
+    <table class="table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Town</th>
+        <th>State</th>
+        <th>Salesperson</th>
+        <th>Telephone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @dealer.each do |d| %>
+        <tr>
+          <td><%= d.name %></td>
+          <td><%= d.town %></td>
+          <td><%= d.state %></td>
+          <td><%= d.salesperson %></td>
+          <td><%= d.telephone %></td>
+          <td><button class="btn btn-primary btn-xs"><%= link_to "Delete", dealer_path(d), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_dealer_path(d) %></button></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table><!-- table for user's dealer contacts(user that is signed in) -->

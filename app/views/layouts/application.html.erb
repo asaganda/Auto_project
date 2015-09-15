@@ -29,6 +29,8 @@
         <div class="hamburger"><span></span></div>
           <div id="container">
             <section>
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
               <%= yield %>
             </section>
           </div><!-- container div -->
@@ -46,9 +48,7 @@
           </div><!-- container div -->
       </div><!-- paper-front div -->
     </div><!-- paper-window div -->
-  <% end %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <% end %><!-- end of the if else statement -->
 
 </body>
 </html>

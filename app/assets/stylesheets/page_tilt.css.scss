@@ -54,6 +54,7 @@ body {
 
 //this is what actually rotates
 #paper-front {
+  height: 100%;
   pointer-events: auto;
   position: relative;
   z-index: 3;
@@ -68,9 +69,11 @@ body {
 
 //actual content
 #container {
+  /*i added this so that user doesn't see any white space*/
+  height: 100vh;
   section {
-    /*changed this height so that the dashboard pic would show properly*/
-    height: 780px;
+    /*this is 100vh so that the section is completely covering the white paper-back*/
+    height: 100vh;
     text-align: center;
     padding-top: 10vh;
     h1 { font-size: 45px; }

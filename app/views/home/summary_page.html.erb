@@ -1,55 +1,74 @@
-<div id="summary">
-  <h2>Dashboard Summary</h2>
+<head>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+</head>
+  <script>
+  function initialize() {
+    var mapProp = {
+      center:new google.maps.LatLng(51.508742,-0.120850),
+      zoom:5,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+<body>
+  <div id="summary">
+    <h2>Dashboard Summary</h2>
 
-  <h3>Cars:</h3>
-  <table class="table-bordered">
-    <thead>
-      <tr>
-        <th>Make</th>
-        <th>Model</th>
-        <th>Year</th>
-        <th>Color</th>
-        <th>Price($)</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @car.each do |c| %>
-        <tr>
-          <td><%= c.make %></td>
-          <td><%= c.model %></td>
-          <td><%= c.year %></td>
-          <td><%= c.color %></td>
-          <td><%= number_to_currency(c.price) %></td>
-          <td><button class="btn btn-primary btn-xs"><%= link_to "Delete", car_path(c), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_car_path(c) %></button></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table><!-- table for user's cars(user that is signed in) -->
-
-
-  <h3>Dealers:</h3>
+    <h3>Cars:</h3>
     <table class="table-bordered">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Town</th>
-        <th>State</th>
-        <th>Salesperson</th>
-        <th>Telephone</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @dealer.each do |d| %>
+      <thead>
         <tr>
-          <td><%= d.name %></td>
-          <td><%= d.town %></td>
-          <td><%= d.state %></td>
-          <td><%= d.salesperson %></td>
-          <td><%= d.telephone %></td>
-          <td><button class="btn btn-primary btn-xs"><%= link_to "Delete", dealer_path(d), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_dealer_path(d) %></button></td>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Color</th>
+          <th>Price($)</th>
+          <th>Action</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table><!-- table for user's dealer contacts(user that is signed in) -->
+      </thead>
+      <tbody>
+        <% @car.each do |c| %>
+          <tr>
+            <td><%= c.make %></td>
+            <td><%= c.model %></td>
+            <td><%= c.year %></td>
+            <td><%= c.color %></td>
+            <td><%= number_to_currency(c.price) %></td>
+            <td><button class="btn btn-primary btn-xs"><%= link_to "Delete", car_path(c), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_car_path(c) %></button></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table><!-- table for user's cars(user that is signed in) -->
+
+
+    <h3>Dealers:</h3>
+      <table class="table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Town</th>
+          <th>State</th>
+          <th>Salesperson</th>
+          <th>Telephone</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @dealer.each do |d| %>
+          <tr>
+            <td><%= d.name %></td>
+            <td><%= d.town %></td>
+            <td><%= d.state %></td>
+            <td><%= d.salesperson %></td>
+            <td><%= number_to_phone(d.telephone, area_code: true) %></td>
+            <td><button class="btn btn-primary btn-xs"><%= link_to "Delete", dealer_path(d), method: :delete, data: { confirm: 'Are you sure?'} %> &nbsp;|&nbsp; <%= link_to "Edit", edit_dealer_path(d) %></button></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table><!-- table for user's dealer contacts(user that is signed in) -->
+    <div id="googleMap" style="width:500px;height:380px;"></div>
+
+  </div>
+</body>
